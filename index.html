@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etch-a-sketch!</title>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1>Etch-a-sketch</h1>
+    <p>Hover over tiles to draw</p>
+  </header>
+
+  <main class="app">
+    <div class="tile-container"></div>
+    <aside class="controls">
+      <h3>Control Panel</h3>
+      <div class="grid-input-box">
+        <label for="grid-size-input">Grid Size</label>
+        <input type="range" id="grid-size-input" name="grid-size-input" min="4" max="64">
+        <p class="grid-output">10x10</p>
+      </div>
+
+      <div class="button-box">
+        <button class="apply-changes-btn">Apply Changes</button>
+        <button class="reset-btn">Reset</button>
+      </div>
+    </aside>
+  </main>
+  
+
+  <script src="./script.js"></script>
+</body>
+</html>
