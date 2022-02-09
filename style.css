@@ -32,7 +32,6 @@ header p {
 
 /* MAIN */
 .app {
-  border: 2px solid black;
   width: 70%;
   max-width: 800px;
   margin: 0 auto;
@@ -41,9 +40,11 @@ header p {
 }
 
 .app .tile-container {
-  border: 2px solid red;
+  border: 3px solid #EF8354;
+  border-radius: 5px;
   height: 600px;
   width: 600px;
+  background-color: #E9E3E6;
 }
 
 .app .controls {
@@ -74,4 +75,23 @@ header p {
 
 .app .controls .grid-output {
   font-size: 1.6rem;
+}
+
+.app .controls .button-box button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.app .controls .button-box .apply-changes-btn {
+  margin-bottom: 2rem;
+  background-color: #58B09C;
+}
+
+.app .controls .button-box .reset-btn {
+  background-color: #EE6C4D;
 }
