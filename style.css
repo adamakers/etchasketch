@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  background-color: #1F5673;
+  background-image: url(./assets/topography.svg);
+  color: #E9E3E6;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 6rem 0;
+}
+
+header h1 {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 2.6rem;
+}
+
+/* MAIN */
+.app {
+  border: 2px solid black;
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  display: flex;
+}
+
+.app .tile-container {
+  border: 2px solid red;
+  height: 600px;
+  width: 600px;
+}
+
+.app .controls {
+  margin-left: 5rem;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app .controls h3 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.app .controls .grid-input-box {
+  margin-bottom: 3rem;
+}
+
+.app .controls label {
+  font-size: 1.8rem;
+}
+
+.app .controls .grid-size-input {
+  background: red;
+}
+
+.app .controls .grid-output {
+  font-size: 1.6rem;
+}
