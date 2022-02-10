@@ -1,10 +1,12 @@
-const applyChangesButton = document.querySelector('.apply-changes-btn');
 const gridSlider = document.querySelector('#grid-size-input');
+const tileContainer = document.querySelector('.tile-container');
+const applyChangesButton = document.querySelector('.apply-changes-btn');
+const resetButton = document.querySelector('.reset-btn');
 
+// creates string of gridElemnts to be added to grid container
 function getGridElements(gridSize) {
   let gridStr = '';
-  
-  //loop to get number of rows
+
   for (let row = 0; row < gridSize; row++) {
     let boxStr = '';
     
@@ -22,8 +24,6 @@ function getGridElements(gridSize) {
 
 
 function drawGrids(gridStr) {
-  const tileContainer = document.querySelector('.tile-container');
-
   tileContainer.innerHTML = '';
   tileContainer.insertAdjacentHTML('afterbegin', gridStr);
 }
@@ -37,6 +37,14 @@ function sliderValueChange(e) {
 
 }
 
+//hoveroverhandler
+function hoverOverBoxHandler(e) {
+  const target = e.target
+  if ( !target.classList.contains('grid-box') ) return;
+  
+  target.classList.add('hovered');
+}
+
 function applyChangesButtonHandler(e) {
   const gridSliderVal = gridSlider.value;
 
@@ -44,11 +52,21 @@ function applyChangesButtonHandler(e) {
   drawGrids(gridStr);
 }
 
-// function resetButton
+// resets the drawn tiles
+function resetButtonHandler() {
+  const allBoxDivs = document.querySelectorAll('.grid-box');
+
+  allBoxDivs.forEach( boxDiv => boxDiv.classList.remove('hovered'));
+}
+
+
 
 
 gridSlider.addEventListener('input', sliderValueChange);
 applyChangesButton.addEventListener('click', applyChangesButtonHandler);
+tileContainer.addEventListener('mouseover', hoverOverBoxHandler);
+resetButton.addEventListener('click', resetButtonHandler);
+
 
 // load grid on page loading
 window.onload = function() {
