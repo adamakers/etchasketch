@@ -40,13 +40,21 @@ function sliderValueChange(e) {
 function applyChangesButtonHandler(e) {
   const gridSliderVal = gridSlider.value;
 
-  console.log(gridSliderVal);
-  // drawGrids
+  const gridStr = getGridElements(gridSliderVal);
+  drawGrids(gridStr);
 }
+
+// function resetButton
 
 
 gridSlider.addEventListener('input', sliderValueChange);
 applyChangesButton.addEventListener('click', applyChangesButtonHandler);
+
+// load grid on page loading
+window.onload = function() {
+  const gridStr = getGridElements(gridSlider.value);
+  drawGrids(gridStr);
+}
 
 
 
