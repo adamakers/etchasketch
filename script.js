@@ -1,4 +1,5 @@
 const applyChangesButton = document.querySelector('.apply-changes-btn');
+const gridSlider = document.querySelector('#grid-size-input');
 
 function getGridElements(gridSize) {
   let gridStr = '';
@@ -27,15 +28,25 @@ function drawGrids(gridStr) {
   tileContainer.insertAdjacentHTML('afterbegin', gridStr);
 }
 
-function applyChangesButtonHandler() {
-  // get value from grid slider
-  const gridSlider = document.querySelector('#grid-size-input');
+//changes the values of the p when slider value changes
+function sliderValueChange(e) {
+  const gridOutput = document.querySelector('.grid-output');
+  const gridSliderVal = gridSlider.value;
 
+  gridOutput.textContent = `${gridSliderVal} X ${gridSliderVal}`;
+
+}
+
+function applyChangesButtonHandler(e) {
   const gridSliderVal = gridSlider.value;
 
   console.log(gridSliderVal);
   // drawGrids
 }
+
+
+gridSlider.addEventListener('input', sliderValueChange);
+applyChangesButton.addEventListener('click', applyChangesButtonHandler);
 
 
 
