@@ -45,6 +45,19 @@ header p {
   height: 600px;
   width: 600px;
   background-color: #E9E3E6;
+  display: flex;
+  flex-direction: column;
+}
+
+.app .tile-container .grid-row {
+  display: flex;
+  flex-grow: 1;
+}
+
+.app .tile-container .grid-box {
+  border: 1px solid lightblue;
+  flex-grow: 1;
+  cursor: pointer;
 }
 
 .app .controls {
