@@ -15,6 +15,13 @@ body {
   color: #E9E3E6;
 }
 
+/* GENERAL STYLES */
+
+button {
+  cursor: pointer;
+}
+
+
 /* HEADER */
 header {
   text-align: center;
@@ -59,6 +66,12 @@ header p {
   flex-grow: 1;
   cursor: pointer;
 }
+
+.app .tile-container .grid-box.hovered {
+  background-color: #000;
+}
+
+/* CONTROLS */
 
 .app .controls {
   margin-left: 5rem;
